@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/textColorLinkInverse"
+    tools:context=".IntroActivity">
+
+    <ImageView
+        android:id="@+id/intro_petjoa"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/intro_petjoa"
+        android:layout_marginTop="80dp"/>
+
+    <ImageView
+        android:id="@+id/intro_dogcat"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/intro_char"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
