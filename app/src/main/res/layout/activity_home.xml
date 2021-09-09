@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bnv"
         app:itemTextColor="@color/bnv_selector"
-        app:itemIconTint="@color/bnv_selector"/>
+        app:itemIconTint="@color/bnv_selector"
+        app:labelVisibilityMode="selected"/>
 
 </LinearLayout>
