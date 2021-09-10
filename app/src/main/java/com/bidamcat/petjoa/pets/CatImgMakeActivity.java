@@ -1,9 +1,11 @@
-package com.bidamcat.petjoa;
+package com.bidamcat.petjoa.pets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.bidamcat.petjoa.R;
 
 public class CatImgMakeActivity extends AppCompatActivity {
 
