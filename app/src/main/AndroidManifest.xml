@@ -9,17 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa">
-
+        <activity android:name=".CatImgMakeActivity"></activity>
         <activity
             android:name=".HomeActivity"
-            android:theme="@style/NoActionBar">
-        </activity>
-
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/LoginActivityTheme">
-        </activity>
-
+            android:theme="@style/LoginActivityTheme" />
         <activity
             android:name=".IntroActivity"
             android:theme="@style/IntroActivityTheme">
@@ -29,8 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
