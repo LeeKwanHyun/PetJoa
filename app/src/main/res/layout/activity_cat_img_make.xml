@@ -41,6 +41,15 @@
             android:layout_below="@+id/iv"
             android:backgroundTint="@color/purple_200"/>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="내용입력"
+            app:boxBackgroundColor="@color/white"
+            android:layout_below="@+id/btn_img">
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
