@@ -35,14 +35,15 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
         <Button
-            android:id="@+id/btn_img"
+            android:id="@+id/btn_imgUpLoad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="사진불러오기"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_below="@+id/iv"
-            android:backgroundTint="@color/purple_200"/>
+            android:backgroundTint="@color/purple_200"
+            android:onClick="click_ImgUpLoad"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tv"
@@ -51,7 +52,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="내용입력"
             app:boxBackgroundColor="@color/white"
-            android:layout_below="@+id/btn_img">
+            android:layout_below="@+id/btn_imgUpLoad">
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,7 +62,8 @@
             android:layout_height="wrap_content"
             android:text="작성완료"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/tv"/>
+            android:layout_below="@+id/tv"
+            android:onClick="click_Ok"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +71,8 @@
             android:backgroundTint="@color/teal_200"
             android:layout_below="@+id/tv"
             android:layout_toLeftOf="@+id/btn_ok"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginRight="8dp"
+            android:onClick="click_cancel"/>
 
 
 
