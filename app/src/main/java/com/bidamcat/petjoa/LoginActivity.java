@@ -17,12 +17,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void clickJoin(View view) {
+
     }
 
     public void clickLogin(View view) {
         Intent intent= new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(intent);
-
 
     }
 }
