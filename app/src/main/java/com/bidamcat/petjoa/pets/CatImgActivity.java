@@ -17,6 +17,5 @@ public class CatImgActivity extends AppCompatActivity {
     }
 
     public void clickImgMake(View view) {
-
     }
 }
