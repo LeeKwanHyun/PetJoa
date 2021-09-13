@@ -9,12 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa">
-        <activity android:name=".pets.CatImgActivity"/>
-        <activity android:name=".pets.CatIFMActivity" />
-        <activity android:name=".pets.CatImgMakeActivity" />
-        <activity android:name=".pets.DogImgMakeActivity" />
-        <activity android:name=".pets.DogIFMActivity" />
-        <activity android:name=".pets.DogImgActivity" />
+        <activity android:name=".pets.CatIFMMakeActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.CatImgActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.CatIFMActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.CatImgMakeActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.DogImgMakeActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.DogIFMActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".pets.DogImgActivity"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".HomeActivity"
             android:theme="@style/NoActionBar" />
