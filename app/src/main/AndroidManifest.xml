@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa">
-        <activity android:name=".pets.CatIFMActivity"></activity>
+        <activity android:name=".pets.DogImgMakeActivity"></activity>
+        <activity android:name=".pets.DogIFMActivity" />
+        <activity android:name=".pets.DogImgActivity" />
+        <activity android:name=".pets.CatIFMActivity" />
         <activity android:name=".pets.CatImgActivity" />
         <activity android:name=".CatImgMakeActivity" />
         <activity

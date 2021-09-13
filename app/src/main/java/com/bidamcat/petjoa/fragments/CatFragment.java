@@ -34,7 +34,6 @@ public class CatFragment extends Fragment {
 
                 Intent intent= new Intent(getActivity(), CatImgActivity.class);
                 startActivity(intent);
-
             }
         });
 
