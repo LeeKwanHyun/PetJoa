@@ -15,7 +15,7 @@
         android:tint="@null"
         android:backgroundTint="@color/purple_200"
         app:fabSize="auto"
-        android:onClick="clickIfmMake"/>
+        android:onClick="clickCatIfmMake"/>
 
 
 

@@ -14,9 +14,12 @@ public class CatImgActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_img);
+
+
     }
 
-    public void clickImgMake(View view) {
-
+    public void clickCatImgMake(View view) {
+        Intent intent= new Intent(this, CatImgMakeActivity.class);
+        startActivity(intent);
     }
 }

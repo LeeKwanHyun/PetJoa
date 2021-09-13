@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:src="@drawable/pet_dog_img"
-        android:layout_below="@id/tv"
         android:scaleType="centerCrop"
         android:clickable="true"/>
 

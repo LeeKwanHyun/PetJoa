@@ -15,6 +15,6 @@
         android:tint="@null"
         android:backgroundTint="@color/purple_200"
         app:fabSize="auto"
-        android:onClick="clickImgMake"/>
+        android:onClick="clickCatImgMake"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

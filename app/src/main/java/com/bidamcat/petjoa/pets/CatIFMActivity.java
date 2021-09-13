@@ -15,7 +15,6 @@ public class CatIFMActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cat_ifmactivity);
     }
 
-    public void clickIfmMake(View view) {
-
+    public void clickCatIfmMake(View view) {
     }
 }
