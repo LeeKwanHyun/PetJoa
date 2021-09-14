@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+
+    <ImageButton
+        android:id="@+id/cat_img"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/pet_cat_img"
+        android:scaleType="centerCrop"
+        android:clickable="true"/>
+
+
+    <ImageButton
+        android:id="@+id/cat_ifm"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/pet_cat_ifm"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:clickable="true"/>
+
+
+
+
+
+
+
+</RelativeLayout>

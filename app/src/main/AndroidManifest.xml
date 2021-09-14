@@ -9,13 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MissingPetMakeActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".pets.DogIFMMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatIFMMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatImgActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatIFMActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatImgMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogImgMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogIFMActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogImgActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/LoginActivityTheme" />
+        <activity
+            android:name=".IntroActivity"
+            android:theme="@style/IntroActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

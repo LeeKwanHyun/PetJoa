@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 바텀네비 아이콘 -->
+    <item android:id="@+id/bnv_home"
+        android:title="Home"
+        android:icon="@drawable/ic_bnv_home"/>
+
+    <item android:id="@+id/bnv_pet"
+        android:title="Pet"
+        android:icon="@drawable/ic_bnv_pet"/>
+
+    <item android:id="@+id/bnv_map"
+        android:title="Map"
+        android:icon="@drawable/ic_bnv_map"/>
+
+</menu>
