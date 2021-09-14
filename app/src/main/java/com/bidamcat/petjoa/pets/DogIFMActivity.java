@@ -2,6 +2,7 @@ package com.bidamcat.petjoa.pets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,5 +17,7 @@ public class DogIFMActivity extends AppCompatActivity {
     }
 
     public void clickDogIfmMake(View view) {
+        Intent intent= new Intent(this, DogIFMMakeActivity.class);
+        startActivity(intent);
     }
 }

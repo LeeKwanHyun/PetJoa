@@ -9,20 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa">
-        <activity android:name=".pets.CatIFMMakeActivity"
+        <activity android:name=".MissingPetMakeActivity"
             android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.CatImgActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.CatIFMActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.CatImgMakeActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.DogImgMakeActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.DogIFMActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".pets.DogImgActivity"
-            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".pets.DogIFMMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatIFMMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatImgActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatIFMActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.CatImgMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogImgMakeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogIFMActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".pets.DogImgActivity"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".HomeActivity"
             android:theme="@style/NoActionBar" />

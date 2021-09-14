@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pets.DogImgMakeActivity">
+    tools:context=".MissingPetMakeActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="강아지사진 게시물 작성"
+            android:text="실종동물 게시물 작성"
             android:textColor="#FF333333"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -47,11 +47,12 @@
             android:onClick="click_ImgUpLoad"/>
 
         <EditText
-            android:id="@+id/et_cat_img_make"
+            android:id="@+id/et_pet_img_make"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="240dp"
             android:layout_below="@id/btn_imgUpLoad"
-            android:hint="내용입력 (최대200글자)"
+            android:hint="내용을 입력하세요. (최대200글자)"
+            android:padding="4dp"
             android:gravity="start"
             android:maxLength="200"
             android:background="@drawable/pet_text_bg"/>
@@ -62,14 +63,14 @@
             android:layout_height="wrap_content"
             android:text="작성완료"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/et_cat_img_make"
+            android:layout_below="@+id/et_pet_img_make"
             android:onClick="click_Ok"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="취소"
             android:backgroundTint="@color/teal_200"
-            android:layout_below="@+id/et_cat_img_make"
+            android:layout_below="@+id/et_pet_img_make"
             android:layout_toLeftOf="@+id/btn_ok"
             android:layout_marginRight="8dp"
             android:onClick="click_cancel"/>
