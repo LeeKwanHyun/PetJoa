@@ -31,10 +31,12 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/iv"
+            android:id="@+id/iv_dog"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/img_make_bg"/>
+            android:background="@drawable/img_make_bg"
+            android:src="@drawable/ic_image_40"
+            android:padding="4dp"/>
         <Button
             android:id="@+id/btn_imgUpLoad"
             android:layout_width="match_parent"
@@ -42,7 +44,7 @@
             android:text="사진불러오기"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_below="@+id/iv"
+            android:layout_below="@+id/iv_dog"
             android:backgroundTint="@color/purple_200"
             android:onClick="click_ImgUpLoad"/>
 

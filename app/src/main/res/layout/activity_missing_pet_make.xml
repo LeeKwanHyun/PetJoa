@@ -34,7 +34,9 @@
             android:id="@+id/iv"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/img_make_bg"/>
+            android:background="@drawable/img_make_bg"
+            android:src="@drawable/ic_image_40"
+            android:padding="4dp"/>
         <Button
             android:id="@+id/btn_imgUpLoad"
             android:layout_width="match_parent"
