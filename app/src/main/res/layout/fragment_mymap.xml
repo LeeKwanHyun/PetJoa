@@ -9,7 +9,7 @@
         android:id="@+id/animal_hospital_list"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:src="@drawable/pet_cat_img"
+        android:src="@drawable/pet_list"
         android:scaleType="centerCrop"
         android:clickable="true"/>
 
@@ -18,7 +18,7 @@
         android:id="@+id/animal_hospital_map"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:src="@drawable/pet_cat_ifm"
+        android:src="@drawable/pet_map"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"
         android:clickable="true"/>
