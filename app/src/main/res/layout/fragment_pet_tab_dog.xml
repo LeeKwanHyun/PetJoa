@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="8dp">
 
 
 
     <ImageButton
         android:id="@+id/dog_img"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:src="@drawable/pet_dog_img"
         android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:clickable="true"/>
 
 
     <ImageButton
         android:id="@+id/dog_ifm"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:src="@drawable/pet_dog_ifm"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
+        android:background="@android:color/transparent"
         android:clickable="true"/>
 </RelativeLayout>
