@@ -45,7 +45,7 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                String address="http://openapi.seoul.go.kr:8088/6c716e7877646c7235316655794665/xml/LOCALDATA_020301/1/100/";
+                String address="http://openapi.seoul.go.kr:8088/6c716e7877646c7235316655794665/xml/LOCALDATA_020301/1/50/";
 
                 try {
                     URL url= new URL(address);

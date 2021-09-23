@@ -8,19 +8,21 @@
     <ImageButton
         android:id="@+id/animal_hospital_list"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="320dp"
         android:src="@drawable/pet_list"
         android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:clickable="true"/>
 
 
     <ImageButton
         android:id="@+id/animal_hospital_map"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="320dp"
         android:src="@drawable/pet_map"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:clickable="true"/>
 
 
