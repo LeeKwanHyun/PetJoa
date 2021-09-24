@@ -3,6 +3,8 @@
     package="com.bidamcat.petjoa">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".GlobalApplication"
@@ -13,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa"
         android:usesCleartextTraffic="true">
-        <activity android:name=".KakaoLoginActivity"></activity>
+
+
+        <activity android:name=".KakaoLoginActivity"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".maps.AnimalHospitalMapActivity"
             android:theme="@style/NoActionBar" />
@@ -79,6 +84,21 @@
                     android:scheme="kakao92f760492890fdc1e0e8166b4c2cfeb7" />
             </intent-filter>
         </activity>
+
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCFEP4ouvvWS-1_MOb1WiQNcalchUCfIi4"/>
+
     </application>
 
 </manifest>
