@@ -112,10 +112,6 @@ public class CatImgMakeActivity extends AppCompatActivity {
                 Toast.makeText(CatImgMakeActivity.this, "error: "+ t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
     }
 
     public void click_cancel(View view) {
