@@ -12,10 +12,21 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bidamcat.petjoa.R;
 import com.bumptech.glide.Glide;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class CatImgMakeActivity extends AppCompatActivity {
@@ -71,12 +82,43 @@ public class CatImgMakeActivity extends AppCompatActivity {
     public void click_Ok(View view) {
         String msg= et.getText().toString();
 
+
         Retrofit retrofit= RetrofitHelper.getRetrofitInstanceScalars();
+        RetrofitService retrofitService= retrofit.create(RetrofitService.class);
+
+        MultipartBody.Part filepart= null;
+        if(imgPath!=null){
+            File file= new File(imgPath);
+            RequestBody requestBody= RequestBody.create(MediaType.parse("image/*"),file);
+            filepart= MultipartBody.Part.createFormData("img", file.getName(), requestBody);
+        }
+
+        Map<String, String> dataPart= new HashMap<>();
+        dataPart.put("msg", msg);
+
+        Call<String> call= retrofitService.postDataToServer(dataPart, filepart);
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String s= response.body();
+                Toast.makeText(CatImgMakeActivity.this, ""+s, Toast.LENGTH_SHORT).show();
+
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(CatImgMakeActivity.this, "error: "+ t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 
     }
 
     public void click_cancel(View view) {
+        finish();
     }
 }
