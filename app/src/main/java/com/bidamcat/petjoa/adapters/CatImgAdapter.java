@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bidamcat.petjoa.R;
 import com.bidamcat.petjoa.items.CatImgItem;
+import com.bumptech.glide.Glide;
 
 import org.w3c.dom.Text;
 
@@ -49,6 +50,8 @@ public class CatImgAdapter extends RecyclerView.Adapter {
         vh.tvName.setText(item.name);
         vh.tvDate.setText(item.date);
 
+        String imgUrl="http://kimbidam2.dothome.co.kr/CatImg/" + item.file;
+        Glide.with(context).load(imgUrl).into(vh.iv);
     }
 
     @Override
@@ -59,7 +62,6 @@ public class CatImgAdapter extends RecyclerView.Adapter {
     class VH extends RecyclerView.ViewHolder{
 
         ImageView iv;
-        CircleImageView circleImageView;
         TextView tvMsg;
         TextView tvName;
         TextView tvDate;
@@ -68,7 +70,6 @@ public class CatImgAdapter extends RecyclerView.Adapter {
             super(itemView);
 
             iv= itemView.findViewById(R.id.iv_cat_img);
-            circleImageView= itemView.findViewById(R.id.iv_cat_profileImg);
             tvMsg= itemView.findViewById(R.id.tv_cat_img_msg);
             tvName= itemView.findViewById(R.id.tv_cat_name);
             tvDate= itemView.findViewById(R.id.tv_cat_date);

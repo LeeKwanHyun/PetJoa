@@ -4,20 +4,18 @@ public class CatImgItem {
 
     public int no;
     public String name;
-    public String profileImg;
     public String msg;
-    public String fileImg;
+    public String file;
     public String date;
 
     public CatImgItem() {
     }
 
-    public CatImgItem(int no, String name, String profileImg, String msg, String fileImg, String date) {
+    public CatImgItem(int no, String name, String msg, String file, String date) {
         this.no = no;
         this.name = name;
-        this.profileImg = profileImg;
         this.msg = msg;
-        this.fileImg = fileImg;
+        this.file = file;
         this.date = date;
     }
 }
