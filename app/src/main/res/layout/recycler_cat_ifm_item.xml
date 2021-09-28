@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="220dp"
+    android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="16dp"
     android:layout_marginLeft="8dp"
@@ -13,46 +13,52 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:padding="4dp">
 
-        <ImageView
-            android:id="@+id/iv_dog_img"
-            android:layout_width="240dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/pet_dog_img"
-            android:scaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/tv_cat_ifm_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고양이에 대한 정보 알려드립니다."
+            android:textSize="20dp"
+            android:textColor="#FF333333"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_cat_ifm_msg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="고양이는 캣잎을 좋아해요"
+            android:ellipsize="end"
+            android:layout_below="@+id/tv_cat_ifm_title"/>
+
+        <TextView
+            android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="작성자"
-            android:layout_above="@id/tv_dog_date"
-            android:layout_toLeftOf="@id/tv_dog_name"/>
+            android:layout_alignParentBottom="true"/>
 
 
         <TextView
-            android:id="@+id/tv_dog_name"
+            android:id="@+id/tv_cat_ifm_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="강아지"
+            android:text="고양이"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#FF333333"
             android:layout_marginLeft="4dp"
-            android:layout_above="@id/tv_dog_date"
-            android:layout_alignParentRight="true"/>
+            android:layout_toRightOf="@+id/tv"
+            android:layout_alignParentBottom="true"/>
+
+
 
         <TextView
-            android:id="@+id/tv_dog_img_msg"
-            android:layout_width="140dp"
-            android:layout_height="160dp"
-            android:text="집사들 안녕 난 귀여운 고양이 ^^"
-            android:layout_toRightOf="@+id/iv_dog_img"
-            android:layout_marginLeft="4dp"
-            android:ellipsize="end"/>
-
-        <TextView
-            android:id="@+id/tv_dog_date"
+            android:id="@+id/tv_cat_ifm_date"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:text="2021.09.06 10:20:23"
