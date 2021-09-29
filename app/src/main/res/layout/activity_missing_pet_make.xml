@@ -31,7 +31,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/iv"
+            android:id="@+id/iv_pet_missing"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@drawable/img_make_bg"
@@ -44,7 +44,7 @@
             android:text="사진불러오기"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_below="@+id/iv"
+            android:layout_below="@+id/iv_pet_missing"
             android:backgroundTint="@color/purple_200"
             android:onClick="click_ImgUpLoad"/>
 
@@ -53,10 +53,10 @@
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:layout_below="@id/btn_imgUpLoad"
-            android:hint="내용을 입력하세요. (최대200글자)"
+            android:hint="내용을 입력하세요. (최대500글자)"
             android:padding="4dp"
             android:gravity="start"
-            android:maxLength="200"
+            android:maxLength="500"
             android:background="@drawable/pet_text_bg"/>
 
         <Button
