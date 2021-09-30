@@ -1,6 +1,10 @@
 package com.bidamcat.petjoa.adapters;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bidamcat.petjoa.R;
+import com.bidamcat.petjoa.itemactivitys.CatImgItemActivity;
 import com.bidamcat.petjoa.items.CatImgItem;
 import com.bumptech.glide.Glide;
 
@@ -73,6 +78,25 @@ public class CatImgAdapter extends RecyclerView.Adapter {
             tvMsg= itemView.findViewById(R.id.tv_cat_img_msg);
             tvName= itemView.findViewById(R.id.tv_cat_name);
             tvDate= itemView.findViewById(R.id.tv_cat_date);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position= getLayoutPosition();
+                    CatImgItem catImgItem= items.get(position);
+
+                    Intent intent= new Intent(context, CatImgItemActivity.class);
+
+                    intent.putExtra("name", catImgItem.name);
+                    intent.putExtra("msg", catImgItem.msg);
+                    intent.putExtra("file", catImgItem.file);
+                    intent.putExtra("date", catImgItem.date);
+
+                    ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation((Activity) context,new Pair<View, String>(iv, "file"));
+                    context.startActivity(intent, options.toBundle());
+
+                }
+            });
         }
     }
 }
