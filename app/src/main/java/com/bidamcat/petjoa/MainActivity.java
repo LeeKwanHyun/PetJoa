@@ -3,6 +3,9 @@ package com.bidamcat.petjoa;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+
+import com.kakao.sdk.common.util.Utility;
 
 public class MainActivity extends AppCompatActivity {
 
