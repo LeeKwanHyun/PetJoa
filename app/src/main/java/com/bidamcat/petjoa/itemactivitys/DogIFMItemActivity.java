@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.bidamcat.petjoa.R;
 
-public class CatIFMItemActivity extends AppCompatActivity {
+public class DogIFMItemActivity extends AppCompatActivity {
 
     TextView tvTitle;
     TextView tvMsg;
@@ -18,12 +18,12 @@ public class CatIFMItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cat_ifmitem);
+        setContentView(R.layout.activity_dog_ifmitem);
 
-        tvTitle= findViewById(R.id.tv_cat_ifm_title_item);
-        tvMsg= findViewById(R.id.tv_cat_ifm_msg_item);
-        tvName= findViewById(R.id.tv_cat_ifm_name_item);
-        tvDate= findViewById(R.id.tv_cat_ifm_date_item);
+        tvTitle= findViewById(R.id.tv_dog_ifm_title_item);
+        tvMsg= findViewById(R.id.tv_dog_ifm_msg_item);
+        tvName= findViewById(R.id.tv_dog_ifm_name_item);
+        tvDate= findViewById(R.id.tv_dog_ifm_date_item);
 
         Intent intent= getIntent();
 

@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_cat_ifmactivity.xml" value="0.21203703703703702" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_cat_ifmitem.xml" value="0.21203703703703702" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_cat_ifmitem.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_cat_img.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_cat_img_item.xml" value="0.21203703703703702" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_dog_ifmitem.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_dog_ifmmake.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_dog_img_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_dog_img_make.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_home.xml" value="0.15" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/activity_pet_missing_item.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/recycler_cat_ifm_item.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PetJoa/app/src/main/res/layout/recycler_dog_ifm_item.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>

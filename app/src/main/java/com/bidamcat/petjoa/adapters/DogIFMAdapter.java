@@ -1,6 +1,7 @@
 package com.bidamcat.petjoa.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bidamcat.petjoa.R;
+import com.bidamcat.petjoa.itemactivitys.CatIFMItemActivity;
+import com.bidamcat.petjoa.itemactivitys.DogIFMItemActivity;
 import com.bidamcat.petjoa.items.CatIFMItem;
 import com.bidamcat.petjoa.items.DogIFMItem;
 
@@ -69,6 +72,24 @@ public class DogIFMAdapter extends RecyclerView.Adapter {
             tvMsg= itemView.findViewById(R.id.tv_dog_ifm_msg);
             tvName= itemView.findViewById(R.id.tv_dog_ifm_name);
             tvDate= itemView.findViewById(R.id.tv_dog_ifm_date);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position= getLayoutPosition();
+                    DogIFMItem dogIFMItem= items.get(position);
+
+                    Intent intent= new Intent(context, DogIFMItemActivity.class);
+
+                    intent.putExtra("title", dogIFMItem.title);
+                    intent.putExtra("name", dogIFMItem.name);
+                    intent.putExtra("msg", dogIFMItem.msg);
+                    intent.putExtra("date", dogIFMItem.date);
+
+                    context.startActivity(intent);
+
+                }
+            });
         }
     }
 }
