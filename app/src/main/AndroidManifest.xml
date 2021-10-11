@@ -17,6 +17,9 @@
         android:theme="@style/Theme.PetJoa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".itemactivitys.DogIFMItemActivity"
+            android:exported="true" />
+        <activity
             android:name=".itemactivitys.DogImgItemActivity"
             android:exported="true" />
         <activity
