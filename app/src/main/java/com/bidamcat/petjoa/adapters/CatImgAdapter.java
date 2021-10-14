@@ -89,11 +89,10 @@ public class CatImgAdapter extends RecyclerView.Adapter {
 
                     intent.putExtra("name", catImgItem.name);
                     intent.putExtra("msg", catImgItem.msg);
-                    intent.putExtra("file", catImgItem.file);
+                    intent.putExtra("file","http://kimbidam2.dothome.co.kr/CatImg/"+ catImgItem.file);
                     intent.putExtra("date", catImgItem.date);
 
-                    ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation((Activity) context,new Pair<View, String>(iv, "file"));
-                    context.startActivity(intent, options.toBundle());
+                    context.startActivity(intent);
 
                 }
             });
