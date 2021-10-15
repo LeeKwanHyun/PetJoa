@@ -40,6 +40,5 @@ public class CatImgItemActivity extends AppCompatActivity {
         tvDate.setText(date);
 
         Glide.with(this).load(imgUrl).into(iv);
-        Toast.makeText(this, ""+imgUrl, Toast.LENGTH_SHORT).show();
     }
 }
