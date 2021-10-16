@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bidamcat.petjoa.R;
 import com.bumptech.glide.Glide;
@@ -39,7 +40,9 @@ public class DogImgItemActivity extends AppCompatActivity {
         tvDate.setText(date);
 
         Glide.with(this).load(imgUrl).into(iv);
+        //Toast.makeText(this, ""+imgUrl, Toast.LENGTH_SHORT).show();
 
         iv.setTransitionName("file");
+
     }
 }

@@ -87,7 +87,7 @@ public class DogImgAdapter extends RecyclerView.Adapter {
 
                     intent.putExtra("name", dogImgItem.name);
                     intent.putExtra("msg", dogImgItem.msg);
-                    intent.putExtra("file", "http://kimbidam2.dothome.co.kr/CatImg/"+ dogImgItem.file);
+                    intent.putExtra("file","http://kimbidam2.dothome.co.kr/DogImg/"+ dogImgItem.file);
                     intent.putExtra("date", dogImgItem.date);
 
                     ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation((Activity) context,new Pair<View, String>(iv, "file"));
