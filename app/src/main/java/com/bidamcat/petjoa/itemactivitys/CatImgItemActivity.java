@@ -40,5 +40,7 @@ public class CatImgItemActivity extends AppCompatActivity {
         tvDate.setText(date);
 
         Glide.with(this).load(imgUrl).into(iv);
+
+        iv.setTransitionName("file");
     }
 }

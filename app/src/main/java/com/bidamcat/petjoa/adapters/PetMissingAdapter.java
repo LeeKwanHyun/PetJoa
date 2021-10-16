@@ -87,7 +87,7 @@ public class PetMissingAdapter extends RecyclerView.Adapter {
 
                     intent.putExtra("name", petMissingItem.name);
                     intent.putExtra("msg", petMissingItem.msg);
-                    intent.putExtra("file", petMissingItem.file);
+                    intent.putExtra("file", "http://kimbidam2.dothome.co.kr/PetMissing/"+petMissingItem.file);
                     intent.putExtra("date", petMissingItem.date);
 
                     ActivityOptions options= ActivityOptions.makeSceneTransitionAnimation((Activity) context,new Pair<View, String>(iv, "file"));
