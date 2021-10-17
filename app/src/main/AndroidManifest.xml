@@ -108,6 +108,8 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCFEP4ouvvWS-1_MOb1WiQNcalchUCfIi4" />
+
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="12119f459b2de77a7732c30734737df7"/>
     </application>
 
 </manifest>
