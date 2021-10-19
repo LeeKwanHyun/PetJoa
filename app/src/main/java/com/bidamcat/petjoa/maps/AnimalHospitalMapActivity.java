@@ -53,8 +53,5 @@ public class AnimalHospitalMapActivity extends AppCompatActivity {
         });
 
 
-
-
-
     }
 }
