@@ -39,13 +39,18 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
     }
 
 
+    public void clickGangDong(View view){
+
+    }
+
     public void clickList(View view) {
 
         new Thread(){
+            StringBuffer buffer= null;
             @Override
             public void run() {
 
-                String address="http://openapi.seoul.go.kr:8088/6c716e7877646c7235316655794665/xml/LOCALDATA_020301/1/50/";
+                String address="http://openapi.seoul.go.kr:8088/6c716e7877646c7235316655794665/xml/LOCALDATA_020301/1/300/";
 
                 try {
                     URL url= new URL(address);
@@ -58,7 +63,7 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
 
                     int eventType= xpp.getEventType();
 
-                    StringBuffer buffer= null;
+
 
                     while(eventType != XmlPullParser.END_DOCUMENT){
 
@@ -113,12 +118,13 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
                                 String name2= xpp.getName();
                                 if(name2.equals("row")){
 
-                                    items.add(buffer.toString());
 
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
+                                            items.add(buffer.toString());
                                             adapter.notifyDataSetChanged();
+
                                         }
                                     });
 
