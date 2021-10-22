@@ -8,37 +8,49 @@
     tools:context=".itemactivitys.CatImgItemActivity">
 
 
-    <ImageView
-        android:id="@+id/iv_cat_img_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/tv_cat_msg_item"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_cat_img_item"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="작성자"
-        android:layout_below="@+id/tv_cat_msg_item"
-        android:layout_toLeftOf="@+id/tv_cat_name_item"
-        android:layout_marginRight="2dp"/>
-    <TextView
-        android:id="@+id/tv_cat_name_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="고양이"
-        android:layout_marginLeft="4dp"
-        android:layout_below="@+id/tv_cat_msg_item"
-        android:layout_alignParentRight="true"/>
-    <TextView
-        android:id="@+id/tv_cat_date_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_cat_name_item"
-        android:layout_alignParentRight="true"/>
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_cat_img_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_cat_msg_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_cat_img_item"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작성자"
+                android:layout_below="@+id/tv_cat_msg_item"
+                android:layout_toLeftOf="@+id/tv_cat_name_item"
+                android:layout_marginRight="2dp"/>
+            <TextView
+                android:id="@+id/tv_cat_name_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고양이"
+                android:layout_marginLeft="4dp"
+                android:layout_below="@+id/tv_cat_msg_item"
+                android:layout_alignParentRight="true"/>
+            <TextView
+                android:id="@+id/tv_cat_date_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cat_name_item"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 
 

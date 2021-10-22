@@ -18,17 +18,23 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".itemactivitys.PetMissingItemActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".itemactivitys.DogIFMItemActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".itemactivitys.DogImgItemActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".itemactivitys.CatIFMItemActivity"
-            android:exported="true" />
-        <activity android:name=".itemactivitys.CatImgItemActivity" />
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".itemactivitys.CatImgItemActivity"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".KakaoLoginActivity"
             android:theme="@style/NoActionBar" />
