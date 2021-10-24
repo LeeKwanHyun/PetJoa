@@ -36,5 +36,7 @@ public class CatIFMItemActivity extends AppCompatActivity {
         tvMsg.setText(msg);
         tvName.setText(name);
         tvDate.setText(date);
+
+
     }
 }
