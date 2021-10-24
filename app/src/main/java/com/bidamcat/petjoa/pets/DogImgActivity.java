@@ -1,6 +1,9 @@
 package com.bidamcat.petjoa.pets;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,6 +11,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -38,10 +42,23 @@ public class DogImgActivity extends AppCompatActivity {
         dogImgAdapter= new DogImgAdapter(this, items);
         recyclerView.setAdapter(dogImgAdapter);
 
+        Toolbar toolbar= findViewById(R.id.toolbar_dogimg);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         String[] permissions= new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if(ActivityCompat.checkSelfPermission(this, permissions[0])== PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(this, permissions, 100);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home) onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

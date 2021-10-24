@@ -1,10 +1,14 @@
 package com.bidamcat.petjoa.pets;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -33,6 +37,19 @@ public class DogIFMActivity extends AppCompatActivity {
         recyclerView= findViewById(R.id.dog_ifm_recycler);
         dogIFMAdapter= new DogIFMAdapter(this, items);
         recyclerView.setAdapter(dogIFMAdapter);
+
+        Toolbar toolbar= findViewById(R.id.toolbar_dogifm);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home) onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
