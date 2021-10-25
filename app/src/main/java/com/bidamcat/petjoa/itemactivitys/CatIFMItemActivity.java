@@ -1,9 +1,13 @@
 package com.bidamcat.petjoa.itemactivitys;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bidamcat.petjoa.R;
@@ -25,6 +29,14 @@ public class CatIFMItemActivity extends AppCompatActivity {
         tvName= findViewById(R.id.tv_cat_ifm_name_item);
         tvDate= findViewById(R.id.tv_cat_ifm_date_item);
 
+        Toolbar toolbar= findViewById(R.id.toolbar_catifm_item);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
         Intent intent= getIntent();
 
         String title= intent.getStringExtra("title");
@@ -37,6 +49,12 @@ public class CatIFMItemActivity extends AppCompatActivity {
         tvName.setText(name);
         tvDate.setText(date);
 
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home) onBackPressed();
+
+        return super.onOptionsItemSelected(item);
     }
 }

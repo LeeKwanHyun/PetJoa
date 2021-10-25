@@ -1,9 +1,13 @@
 package com.bidamcat.petjoa.itemactivitys;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +32,13 @@ public class DogImgItemActivity extends AppCompatActivity {
         tvName= findViewById(R.id.tv_dog_name_item);
         tvDate= findViewById(R.id.tv_dog_date_item);
 
+        Toolbar toolbar= findViewById(R.id.toolbar_dogimg_item);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         Intent intent= getIntent();
 
         String name= intent.getStringExtra("name");
@@ -44,5 +55,11 @@ public class DogImgItemActivity extends AppCompatActivity {
 
         iv.setTransitionName("file");
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home) onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 }
