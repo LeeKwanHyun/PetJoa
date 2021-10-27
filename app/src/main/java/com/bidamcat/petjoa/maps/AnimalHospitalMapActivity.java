@@ -51,7 +51,5 @@ public class AnimalHospitalMapActivity extends AppCompatActivity {
                 googleMap.setMyLocationEnabled(true);
             }
         });
-
-
     }
 }
