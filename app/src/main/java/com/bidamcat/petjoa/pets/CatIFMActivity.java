@@ -66,7 +66,7 @@ public class CatIFMActivity extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<CatIFMItem>>() {
             @Override
             public void onResponse(Call<ArrayList<CatIFMItem>> call, Response<ArrayList<CatIFMItem>> response) {
-                items. clear();
+                items.clear();
                 catIFMAdapter.notifyDataSetChanged();
 
                 ArrayList<CatIFMItem> list= response.body();
