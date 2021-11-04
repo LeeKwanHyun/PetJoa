@@ -45,6 +45,7 @@ public class KakaoLoginActivity extends AppCompatActivity {
                     @Override
                     public Unit invoke(User user, Throwable throwable) {
                         if(user!=null){
+
                             G.id= user.getId();
 
                             G.nickname= user.getKakaoAccount().getProfile().getNickname();
@@ -79,11 +80,11 @@ public class KakaoLoginActivity extends AppCompatActivity {
                     }
                 });
                 
-                if(oAuthToken != null){
-                    
-                }else{
-                    Toast.makeText(KakaoLoginActivity.this, "사용자정보 요청 실패", Toast.LENGTH_SHORT).show();
-                }
+//                if(oAuthToken != null){
+//
+//                }else{
+//                    Toast.makeText(KakaoLoginActivity.this, "사용자정보 요청 실패", Toast.LENGTH_SHORT).show();
+//                }
                 
                 
                 return null;

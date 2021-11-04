@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -85,6 +86,7 @@ public class DogImgAdapter extends RecyclerView.Adapter {
 
                     Intent intent= new Intent(context, DogImgItemActivity.class);
 
+                    intent.putExtra("no", dogImgItem.no+"");
                     intent.putExtra("name", dogImgItem.name);
                     intent.putExtra("msg", dogImgItem.msg);
                     intent.putExtra("file","http://kimbidam2.dothome.co.kr/DogImg/"+ dogImgItem.file);
