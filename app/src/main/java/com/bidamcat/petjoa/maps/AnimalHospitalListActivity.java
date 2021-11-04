@@ -49,6 +49,13 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
             StringBuffer buffer= null;
             @Override
             public void run() {
+               runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                       items.clear();
+                       adapter.notifyDataSetChanged();
+                   }
+               });
 
                 String address="http://openapi.seoul.go.kr:8088/6c716e7877646c7235316655794665/xml/LOCALDATA_020301/1/300/";
 
@@ -117,16 +124,8 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
                             case XmlPullParser.END_TAG:
                                 String name2= xpp.getName();
                                 if(name2.equals("row")){
+                                    items.add(buffer.toString());
 
-
-                                    runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            items.add(buffer.toString());
-                                            adapter.notifyDataSetChanged();
-
-                                        }
-                                    });
 
                                 }
                                 break;
@@ -137,6 +136,12 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
                         eventType= xpp.next();
 
                     }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
 
                 } catch (MalformedURLException e) {
                     e.printStackTrace();

@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bidamcat.petjoa.G;
 import com.bidamcat.petjoa.R;
 import com.bumptech.glide.Glide;
 
@@ -99,6 +100,7 @@ public class DogImgMakeActivity extends AppCompatActivity {
 
         Map<String, String> dataPart= new HashMap<>();
         dataPart.put("msg", msg);
+        dataPart.put("name", G.nickname);
 
         Call<String> call= retrofitService_dog.postDataToServer(dataPart, filepart);
 
