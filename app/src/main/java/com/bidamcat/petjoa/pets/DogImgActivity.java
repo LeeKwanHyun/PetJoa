@@ -83,7 +83,6 @@ public class DogImgActivity extends AppCompatActivity {
                     items.add(0, item);
                     dogImgAdapter.notifyItemInserted(0);
                 }
-
             }
 
             @Override

@@ -87,6 +87,7 @@ public class CatImgAdapter extends RecyclerView.Adapter {
 
                     Intent intent= new Intent(context, CatImgItemActivity.class);
 
+                    intent.putExtra("no", catImgItem.no+"");
                     intent.putExtra("name", catImgItem.name);
                     intent.putExtra("msg", catImgItem.msg);
                     intent.putExtra("file","http://kimbidam2.dothome.co.kr/CatImg/"+ catImgItem.file);

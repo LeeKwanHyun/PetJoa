@@ -85,6 +85,7 @@ public class CatIFMAdapter extends RecyclerView.Adapter {
 
                     Intent intent= new Intent(context, CatIFMItemActivity.class);
 
+                    intent.putExtra("no", catIFMItem.no+"");
                     intent.putExtra("title", catIFMItem.title);
                     intent.putExtra("name", catIFMItem.name);
                     intent.putExtra("msg", catIFMItem.msg);

@@ -27,10 +27,15 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp">
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp">
 
         <TextView
             android:id="@+id/tv_cat_ifm_title_item"
@@ -81,8 +86,19 @@
             android:layout_below="@id/tv_cat_ifm_name_item"
             android:layout_alignParentRight="true"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:layout_below="@+id/tv_cat_ifm_date_item"
+            android:layout_alignParentRight="true"
+            android:onClick="clickDelete"/>
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </ScrollView>
+
+
+
 
 
 </LinearLayout>

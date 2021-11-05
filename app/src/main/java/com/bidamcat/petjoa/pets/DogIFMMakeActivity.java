@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bidamcat.petjoa.G;
 import com.bidamcat.petjoa.R;
 
 import java.util.HashMap;
@@ -41,6 +42,7 @@ public class DogIFMMakeActivity extends AppCompatActivity {
         Map<String, String> dataPart= new HashMap<>();
         dataPart.put("title", title);
         dataPart.put("msg", msg);
+        dataPart.put("name", G.nickname);
 
         Call<String> call= retrofitServiceDogIfm.postDataToServer(dataPart);
 

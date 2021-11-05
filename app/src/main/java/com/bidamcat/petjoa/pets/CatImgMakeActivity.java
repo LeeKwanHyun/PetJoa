@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bidamcat.petjoa.G;
 import com.bidamcat.petjoa.R;
 import com.bumptech.glide.Glide;
 
@@ -95,6 +96,7 @@ public class CatImgMakeActivity extends AppCompatActivity {
 
         Map<String, String> dataPart= new HashMap<>();
         dataPart.put("msg", msg);
+        dataPart.put("name", G.nickname);
 
         Call<String> call= retrofitService.postDataToServer(dataPart, filepart);
 

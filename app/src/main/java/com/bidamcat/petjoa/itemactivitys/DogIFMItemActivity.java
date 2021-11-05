@@ -8,9 +8,18 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bidamcat.petjoa.R;
+import com.bidamcat.petjoa.pets.RetrofitService_Dog_Ifm;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class DogIFMItemActivity extends AppCompatActivity {
 
@@ -18,6 +27,8 @@ public class DogIFMItemActivity extends AppCompatActivity {
     TextView tvMsg;
     TextView tvName;
     TextView tvDate;
+
+    String no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +49,7 @@ public class DogIFMItemActivity extends AppCompatActivity {
 
         Intent intent= getIntent();
 
+        no= intent.getStringExtra("no");
         String title= intent.getStringExtra("title");
         String name= intent.getStringExtra("name");
         String msg= intent.getStringExtra("msg");
@@ -53,5 +65,28 @@ public class DogIFMItemActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==android.R.id.home) onBackPressed();
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clickDelete(View view) {
+        Retrofit.Builder builder= new Retrofit.Builder();
+        builder.baseUrl("http://kimbidam2.dothome.co.kr/");
+        builder.addConverterFactory(ScalarsConverterFactory.create());
+        Retrofit retrofit= builder.build();
+
+        RetrofitService_Dog_Ifm retrofitService_dog_ifm= retrofit.create(RetrofitService_Dog_Ifm.class);
+        Call<String> call= retrofitService_dog_ifm.deleteDateToServer(no);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String s= response.body();
+                Toast.makeText(DogIFMItemActivity.this, ""+s, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(DogIFMItemActivity.this, "서버오류", Toast.LENGTH_SHORT).show();
+            }
+        });
+        finish();
     }
 }

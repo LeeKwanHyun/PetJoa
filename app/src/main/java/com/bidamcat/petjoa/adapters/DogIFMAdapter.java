@@ -81,6 +81,7 @@ public class DogIFMAdapter extends RecyclerView.Adapter {
 
                     Intent intent= new Intent(context, DogIFMItemActivity.class);
 
+                    intent.putExtra("no", dogIFMItem.no+"");
                     intent.putExtra("title", dogIFMItem.title);
                     intent.putExtra("name", dogIFMItem.name);
                     intent.putExtra("msg", dogIFMItem.msg);
