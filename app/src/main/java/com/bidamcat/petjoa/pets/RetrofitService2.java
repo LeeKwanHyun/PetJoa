@@ -13,6 +13,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
+import retrofit2.http.Query;
 
 public interface RetrofitService2 {
 
@@ -25,4 +26,7 @@ public interface RetrofitService2 {
     //서버에서 데이터를 json으로 받아 자동 파싱해서 ArrayList에 바로 넣어주는 기능 메소드
     @GET("/CatIfm/loadDB.php")
     Call<ArrayList<CatIFMItem>> loadDataFromServer();
+
+    @GET("/CatIfm/delete.php")
+    Call<String> deleteDateToServer(@Query("no") String no);
 }

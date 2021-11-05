@@ -56,8 +56,7 @@ public class CatImgActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==android.R.id.home) onBackPressed();
-
+        if(item.getItemId()==android.R.id.home) onBackPressed();
         return super.onOptionsItemSelected(item);
     }
 
@@ -69,19 +68,16 @@ public class CatImgActivity extends AppCompatActivity {
     }
 
     void loadDataFromServer(){
-
         Retrofit retrofit= RetrofitHelper.getRetrofitInstanceGson();
         RetrofitService retrofitService= retrofit.create(RetrofitService.class);
         Call<ArrayList<CatImgItem>> call= retrofitService.loadDataFromServer();
         call.enqueue(new Callback<ArrayList<CatImgItem>>() {
             @Override
             public void onResponse(Call<ArrayList<CatImgItem>> call, Response<ArrayList<CatImgItem>> response) {
-
                 items.clear();
                 catImgAdapter.notifyDataSetChanged();
 
                 ArrayList<CatImgItem> list= response.body();
-
                 for(CatImgItem item : list){
                     items.add(0, item);
                     catImgAdapter.notifyItemInserted(0);

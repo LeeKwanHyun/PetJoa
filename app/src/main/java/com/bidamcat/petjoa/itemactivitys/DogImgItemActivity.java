@@ -56,7 +56,7 @@ public class DogImgItemActivity extends AppCompatActivity {
         String msg= intent.getStringExtra("msg");
         String date= intent.getStringExtra("date");
         String imgUrl= intent.getStringExtra("file");
-        Toast.makeText(this, ""+no, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, ""+no, Toast.LENGTH_SHORT).show();
 
         tvMsg.setText(msg);
         tvName.setText(name);
@@ -75,12 +75,11 @@ public class DogImgItemActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void click123(View view) {
+    public void clickDelete(View view) {
         Retrofit.Builder builder= new Retrofit.Builder();
         builder.baseUrl("http://kimbidam2.dothome.co.kr/");
         builder.addConverterFactory(ScalarsConverterFactory.create());
         Retrofit retrofit= builder.build();
-        Toast.makeText(this, ""+no, Toast.LENGTH_SHORT).show();
 
         RetrofitService_Dog retrofitService_dog= retrofit.create(RetrofitService_Dog.class);
         Call<String> call= retrofitService_dog.deleteDateToServer(no);
@@ -96,5 +95,6 @@ public class DogImgItemActivity extends AppCompatActivity {
                 Toast.makeText(DogImgItemActivity.this, "서버오류", Toast.LENGTH_SHORT).show();
             }
         });
+        finish();
     }
 }
