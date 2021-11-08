@@ -98,6 +98,7 @@ public class MissingPetMakeActivity extends AppCompatActivity {
 
         Map<String, String> dataPart= new HashMap<>();
         dataPart.put("msg", msg);
+        dataPart.put("name", G.nickname);
 
         Call<String> call= retrofitServicePetMissing.postDataToServer(dataPart, filepart);
 
