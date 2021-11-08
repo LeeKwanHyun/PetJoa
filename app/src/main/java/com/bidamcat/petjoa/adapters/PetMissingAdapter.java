@@ -85,6 +85,7 @@ public class PetMissingAdapter extends RecyclerView.Adapter {
 
                     Intent intent= new Intent(context, PetMissingItemActivity.class);
 
+                    intent.putExtra("no", petMissingItem.no+"");
                     intent.putExtra("name", petMissingItem.name);
                     intent.putExtra("msg", petMissingItem.msg);
                     intent.putExtra("file", "http://kimbidam2.dothome.co.kr/PetMissing/"+petMissingItem.file);
