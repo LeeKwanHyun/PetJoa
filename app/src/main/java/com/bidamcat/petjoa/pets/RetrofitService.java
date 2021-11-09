@@ -29,4 +29,7 @@ public interface RetrofitService {
 
     @GET("/CatImg/delete.php")
     Call<String> deleteDateToServer(@Query("no") String no);
+
+//    @GET("/CatImg/modify.php")
+//    Call<String> modifyDateToServer(@Query("no") String no);
 }
