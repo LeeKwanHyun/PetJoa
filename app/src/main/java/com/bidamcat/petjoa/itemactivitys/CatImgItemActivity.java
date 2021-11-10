@@ -96,13 +96,13 @@ public class CatImgItemActivity extends AppCompatActivity {
         finish();
     }
 
-//    public void clickModify(View view) {
-//        Retrofit. Builder builder= new Retrofit.Builder();
-//        builder.baseUrl("http://kimbidam2.dothome.co.kr/");
-//        builder.addConverterFactory(ScalarsConverterFactory.create());
-//        Retrofit retrofit= builder.build();
-//
-//        RetrofitService retrofitService= retrofit.create(RetrofitService.class);
+    public void clickModify(View view) {
+        Retrofit. Builder builder= new Retrofit.Builder();
+        builder.baseUrl("http://kimbidam2.dothome.co.kr/");
+        builder.addConverterFactory(ScalarsConverterFactory.create());
+        Retrofit retrofit= builder.build();
+
+        RetrofitService retrofitService= retrofit.create(RetrofitService.class);
 //        Call<String> call= retrofitService.modifyDateToServer(no);
 //        call.enqueue(new Callback<String>() {
 //            @Override
@@ -116,5 +116,5 @@ public class CatImgItemActivity extends AppCompatActivity {
 //                Toast.makeText(CatImgItemActivity.this, "서버오류", Toast.LENGTH_SHORT).show();
 //            }
 //        });
-//    }
+    }
 }
