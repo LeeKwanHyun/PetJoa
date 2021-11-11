@@ -96,25 +96,13 @@ public class CatImgItemActivity extends AppCompatActivity {
         finish();
     }
 
-    public void clickModify(View view) {
-        Retrofit. Builder builder= new Retrofit.Builder();
-        builder.baseUrl("http://kimbidam2.dothome.co.kr/");
-        builder.addConverterFactory(ScalarsConverterFactory.create());
-        Retrofit retrofit= builder.build();
-
-        RetrofitService retrofitService= retrofit.create(RetrofitService.class);
-//        Call<String> call= retrofitService.modifyDateToServer(no);
-//        call.enqueue(new Callback<String>() {
-//            @Override
-//            public void onResponse(Call<String> call, Response<String> response) {
-//                String s= response.body();
-//                Toast.makeText(CatImgItemActivity.this, ""+s, Toast.LENGTH_SHORT).show();
-//            }
+//    public void clickModify(View view) {
+//        Retrofit. Builder builder= new Retrofit.Builder();
+//        builder.baseUrl("http://kimbidam2.dothome.co.kr/");
+//        builder.addConverterFactory(ScalarsConverterFactory.create());
+//        Retrofit retrofit= builder.build();
 //
-//            @Override
-//            public void onFailure(Call<String> call, Throwable t) {
-//                Toast.makeText(CatImgItemActivity.this, "서버오류", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-    }
+//        RetrofitService retrofitService= retrofit.create(RetrofitService.class);
+//
+//    }
 }
