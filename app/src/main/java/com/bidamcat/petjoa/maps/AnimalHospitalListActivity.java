@@ -39,10 +39,6 @@ public class AnimalHospitalListActivity extends AppCompatActivity {
     }
 
 
-    public void clickGangDong(View view){
-
-    }
-
     public void clickList(View view) {
 
         new Thread(){
