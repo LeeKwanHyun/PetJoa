@@ -30,9 +30,9 @@ public interface RetrofitService {
     @GET("/CatImg/delete.php")
     Call<String> deleteDateToServer(@Query("no") String no);
 
-    @Multipart
-    @POST("/CatImg/modify.php")
-    Call<String> modifyDateToServer(@PartMap Map<String, String> dataPart,
-                                    @Part MultipartBody.Part filePart);
+//    @Multipart
+//    @POST("/CatImg/modify.php")
+//    Call<String> modifyDateToServer(@PartMap Map<String, String> dataPart,
+//                                    @Part MultipartBody.Part filePart);
 
 }
