@@ -95,5 +95,6 @@ public class CatImgActivity extends AppCompatActivity {
         Intent intent= new Intent(this, CatImgMakeActivity.class);
         startActivity(intent);
     }
+
 }
 
