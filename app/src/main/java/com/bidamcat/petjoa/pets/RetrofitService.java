@@ -35,4 +35,5 @@ public interface RetrofitService {
 //    Call<String> modifyDateToServer(@PartMap Map<String, String> dataPart,
 //                                    @Part MultipartBody.Part filePart);
 
+
 }
