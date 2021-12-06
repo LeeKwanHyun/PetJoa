@@ -16,8 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetJoa"
         android:usesCleartextTraffic="true">
-        <activity android:name=".maps.PlaceUrlActivity"></activity>
-
+        <activity
+            android:name=".modify.CatImgModifyActivity"
+            android:exported="false" />
+        <activity android:name=".maps.PlaceUrlActivity" />
         <activity
             android:name=".itemactivitys.PetMissingItemActivity"
             android:exported="true"

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
+    tools:context=".modify.CatImgModifyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고양이사진 게시물 수정"
+            android:textColor="#FF333333"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_cat_modify"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/img_make_bg"
+            android:src="@drawable/ic_image_40"
+            android:padding="4dp"/>
+        <Button
+            android:id="@+id/btn_imgUpLoad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진불러오기"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/iv_cat_modify"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="click_ImgUpLoad"/>
+
+        <EditText
+            android:id="@+id/et_cat_img_modify"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_below="@id/btn_imgUpLoad"
+            android:hint="내용을 입력하세요. (최대200글자)"
+            android:padding="4dp"
+            android:gravity="start"
+            android:maxLength="200"
+            android:background="@drawable/pet_text_bg"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작성완료"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/et_cat_img_modify"
+            android:onClick="click_Ok"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:backgroundTint="@color/teal_200"
+            android:layout_below="@+id/et_cat_img_modify"
+            android:layout_toLeftOf="@+id/btn_ok"
+            android:layout_marginRight="8dp"
+            android:onClick="click_cancel"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
