@@ -64,7 +64,7 @@
             android:id="@+id/btn_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="작성완료"
+            android:text="수정완료"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/et_cat_img_modify"
             android:onClick="click_Ok"/>
